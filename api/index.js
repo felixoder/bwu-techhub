@@ -15,9 +15,7 @@ dotenv.config();
 app.use(express.json());
 const __dirname = path.resolve();
 app.use(cookieParser());
-app.get('/',(req,res)=>{
-    res.json('Hello the app is running')
-})
+
 
 mongoose.connect(process.env.MONGO_URI).then(()=>{
     console.log('The database is connected')

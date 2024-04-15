@@ -30,9 +30,13 @@ app.use('/api/event',eventRoutes);
 app.use('/api/newsletter',newsletterRoutes);
 app.use('/api/topper',topperRoutes);
 app.use('/api/feedback',feedbackRoutes);
-app.get('*',(req,res)=>{
-    res.sendFile(path.join(__dirname, 'client','dist','index.html'))
-  })
+// Serve static files (e.g., frontend build)
+app.use(express.static(path.join(__dirname, 'client', 'dist')));
+
+// Serve index.html for any other routes (client-side routing)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'));
+});
 app.listen(process.env.PORT,()=>{
     console.log(`The app is running on https://localhost:${process.env.PORT}`);
 })

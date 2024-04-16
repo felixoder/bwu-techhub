@@ -82,7 +82,7 @@ export default function App() {
             {chatOpen ? <TiArrowSortedDown className="text-3xl cursor-pointer" /> : <FaRegMessage className="text-2xl cursor-pointer"/>}
           </button>
           {chatOpen && (
-            <div className="bg-white fixed bottom-[150px] right-4 p-4 rounded-lg shadow-md h-[400px] w-[400px] md:w-[300px]">
+            <div className="bg-white fixed bottom-[150px] right-4 p-4 rounded-lg shadow-md h-[400px] w-[300px] md:w-[300px]">
               <Message className='bg-blue-500 text-white'/>
             </div>
           )}

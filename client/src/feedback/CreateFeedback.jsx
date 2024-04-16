@@ -69,7 +69,7 @@ export default function CreateFeedback() {
           
         />
          <select
-                    className='w-[400px]'
+                    className='w-[200px]'
                     id='rate'
                     name='rate'
                     onChange={(e) => setFormData({ ...formData, rate: e.target.value })}

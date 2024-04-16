@@ -119,7 +119,7 @@ export default function CreateToppers() {
         <input
           type="text"
           onChange={(e) => setFormData({ ...formData, f_name: e.target.value })}
-          className="rounded sm "
+          className="rounded sm w-[200px]"
           name="f_name"
           id="f_name"
           placeholder="Name of the Toppers"

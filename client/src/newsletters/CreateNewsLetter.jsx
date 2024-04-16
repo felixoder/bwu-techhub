@@ -125,7 +125,7 @@ export default function CreateNewsLetter() {
           placeholder="Name of NewsLetter"
         />
          <select
-                    className='w-[400px]'
+                    className='w-[200px]'
                     id='board'
                     name='board'
                     onChange={(e) => setFormData({ ...formData, month: e.target.value })}

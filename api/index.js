@@ -8,6 +8,7 @@ import eventRoutes from './router/event.route.js'
 import newsletterRoutes from './router/newsletter.route.js'
 import topperRoutes from './router/topper.route.js'
 import feedbackRoutes from './router/feedback.route.js'
+import messageRoutes from './router/message.route.js'
 import cookieParser from "cookie-parser";
 import path from 'path';
 const app = express();
@@ -30,6 +31,7 @@ app.use('/api/event',eventRoutes);
 app.use('/api/newsletter',newsletterRoutes);
 app.use('/api/topper',topperRoutes);
 app.use('/api/feedback',feedbackRoutes);
+app.use('/api/message',messageRoutes);
 // Serve static files (e.g., frontend build)
 app.use(express.static(path.join(__dirname, 'client', 'dist')));
 

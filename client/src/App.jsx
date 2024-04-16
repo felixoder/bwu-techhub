@@ -79,7 +79,7 @@ export default function App() {
             }`}
             onClick={toggleChat}
           >
-            {chatOpen ? <TiArrowSortedDown className="text-3xl" /> : <FaRegMessage className="text-2xl"/>}
+            {chatOpen ? <TiArrowSortedDown className="text-3xl cursor-pointer" /> : <FaRegMessage className="text-2xl cursor-pointer"/>}
           </button>
           {chatOpen && (
             <div className="bg-white fixed bottom-16 right-4 p-4 rounded-lg shadow-md h-[400px] w-[400px]">

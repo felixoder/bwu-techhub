@@ -49,7 +49,7 @@ export default function CreateFeedback() {
       </h1>
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col w-[500px] gap-2  mx-auto"
+        className="flex flex-col w-[350px] gap-2  mx-auto"
       >
         <input
           type="text"
@@ -64,8 +64,9 @@ export default function CreateFeedback() {
           onChange={(e) => setFormData({ ...formData, desc: e.target.value })}
           name="desc"
           id="desc"
-          className="rounded sm"
+          className="rounded sm "
           placeholder="Your Feedback"
+          
         />
          <select
                     className='w-[400px]'
@@ -89,16 +90,12 @@ export default function CreateFeedback() {
         
     
         
-        <Button
-          gradientDuoTone="purpleToBlue"
-          className=" mb-3"
-          pill
-          size="sm"
-          outline
+        <button
+          className=" mb-3 bg-purple-700 text-white rounded-md h-[50px]"
           type="submit"
         >
           Create
-        </Button>
+        </button>
       </form>
     </div>
   );

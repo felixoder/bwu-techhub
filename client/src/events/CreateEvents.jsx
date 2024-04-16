@@ -97,12 +97,12 @@ export default function CreateEvents() {
         toast.error(data.message);
       } else {
         setPublishError(null);
-        toast.success("PYQ is uploaded successfully");
+        toast.success("Event is uploaded successfully");
         navigate(`/event/${data.slug}`);
       }
     } catch (err) {
       setPublishError(err.message);
-      toast.error("Oops! The PYQ was not uploaded");
+      toast.error("Oops! The Event was not uploaded");
     }
   };
 
@@ -114,7 +114,7 @@ export default function CreateEvents() {
       </h1>
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col w-[500px] gap-2  mx-auto"
+        className="flex flex-col w-[350px] gap-2  mx-auto"
       >
         <input
           type="text"
@@ -160,14 +160,14 @@ export default function CreateEvents() {
         <Label>Choose Docs *Only PDF under 2 MB is supported</Label>
         <div className="flex gap-2">
           <FileInput
+          className="-z-20"
             type="pdf"
             accept="application/pdf"
             onChange={(e) => setFile(e.target.files[0])}
           />
-          <Button
+          <button
             type="button"
-            gradientDuoTone="purpleToPink"
-            outline
+            className="bg-pink-800 font-semibold text-white rounded-md"
             onClick={handleUpload}
             disabled={imageUploadProgress}
           >
@@ -181,7 +181,7 @@ export default function CreateEvents() {
             ) : (
               "Upload PDF"
             )}
-          </Button>
+          </button>
         </div>
         <input
           type="text"
@@ -199,8 +199,9 @@ export default function CreateEvents() {
           />
         )}
         <Button
+      
           gradientDuoTone="purpleToBlue"
-          className=" mb-3"
+          className="-z-20 mb-3"
           pill
           size="sm"
           outline

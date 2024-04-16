@@ -114,7 +114,7 @@ export default function CreateNewsLetter() {
       </h1>
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col w-[500px] gap-2  mx-auto"
+        className="flex flex-col w-[350px] gap-2  mx-auto"
       >
         <input
           type="text"
@@ -163,14 +163,15 @@ export default function CreateNewsLetter() {
         <Label>Choose Docs *Only PDF under 2 MB is supported</Label>
         <div className="flex gap-2">
           <FileInput
+          className="-z-20"
             type="pdf"
             accept="application/pdf"
             onChange={(e) => setFile(e.target.files[0])}
           />
-          <Button
+          <button
             type="button"
-            gradientDuoTone="purpleToPink"
-            outline
+            className="bg-pink-800 font-semibold text-white rounded-md"
+         
             onClick={handleUpload}
             disabled={imageUploadProgress}
           >
@@ -184,7 +185,7 @@ export default function CreateNewsLetter() {
             ) : (
               "Upload PDF"
             )}
-          </Button>
+          </button>
         </div>
       
         {formData.pdf && (
@@ -194,16 +195,14 @@ export default function CreateNewsLetter() {
             className="w-72 h-72 object-cover mx-auto"
           />
         )}
-        <Button
-          gradientDuoTone="purpleToBlue"
-          className=" mb-3"
-          pill
-          size="sm"
-          outline
+        <button
+ 
+          className="bg-purple-800 text-white font-semibold h-[30px] rounded-md mb-3"
+          
           type="submit"
         >
           Create
-        </Button>
+        </button>
       </form>
     </div>
   );

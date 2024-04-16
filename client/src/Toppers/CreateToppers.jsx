@@ -114,7 +114,7 @@ export default function CreateToppers() {
       </h1>
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col w-[500px] gap-2  mx-auto"
+        className="flex flex-col w-[350px] gap-2  mx-auto"
       >
         <input
           type="text"
@@ -178,11 +178,13 @@ export default function CreateToppers() {
         <Label>Choose Image *Only Image under 2 MB is supported</Label>
         <div className="flex gap-2">
           <FileInput
+          className="-z-20"
             type="file"
             accept="image/*"
             onChange={(e) => setFile(e.target.files[0])}
           />
           <Button
+          className="-z-20"
             type="button"
             gradientDuoTone="purpleToPink"
             outline
@@ -210,8 +212,9 @@ export default function CreateToppers() {
           />
         )}
         <Button
+        
           gradientDuoTone="purpleToBlue"
-          className=" mb-3"
+          className="-z-20 mb-3"
           pill
           size="sm"
           outline

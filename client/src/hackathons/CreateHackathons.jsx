@@ -114,7 +114,7 @@ export default function CreateHackathons() {
       </h1>
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col w-[500px] gap-2  mx-auto"
+        className="flex flex-col w-[350px] gap-2  mx-auto"
       >
         <input
           type="text"
@@ -167,13 +167,14 @@ export default function CreateHackathons() {
         <Label>Choose Docs *Only PDF under 2 MB is supported</Label>
         <div className="flex gap-2">
           <FileInput
+            className="-z-20"
             type="pdf"
             accept="application/pdf"
             onChange={(e) => setFile(e.target.files[0])}
           />
-          <Button
+          <button
             type="button"
-            gradientDuoTone="purpleToPink"
+            className="bg-pink-700 text-white font-semibold rounded-md"
             outline
             onClick={handleUpload}
             disabled={imageUploadProgress}
@@ -188,7 +189,7 @@ export default function CreateHackathons() {
             ) : (
               "Upload PDF"
             )}
-          </Button>
+          </button>
         </div>
         <input
           type="text"
@@ -205,16 +206,13 @@ export default function CreateHackathons() {
             className="w-72 h-72 object-cover mx-auto"
           />
         )}
-        <Button
-          gradientDuoTone="purpleToBlue"
-          className=" mb-3"
-          pill
-          size="sm"
-          outline
+        <button
+          className=" mb-3 bg-blue-800 text-white rounded-md font-semibold h-[50px]"
+          
           type="submit"
         >
           Create
-        </Button>
+        </button>
       </form>
     </div>
   );

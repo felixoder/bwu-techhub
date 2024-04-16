@@ -125,7 +125,7 @@ export default function CreateToppers() {
           placeholder="Name of the Toppers"
         />
          <select
-                    className='w-[400px]'
+                    className='w-[200px]'
                     id='department'
                     name='department'
                     onChange={(e) => setFormData({ ...formData, department: e.target.value })}

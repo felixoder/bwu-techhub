@@ -160,7 +160,7 @@ export default function CreateEvents() {
         <Label>Choose Docs *Only PDF under 2 MB is supported</Label>
         <div className="flex gap-2">
           <FileInput
-          className="-z-20"
+          className=""
             type="pdf"
             accept="application/pdf"
             onChange={(e) => setFile(e.target.files[0])}

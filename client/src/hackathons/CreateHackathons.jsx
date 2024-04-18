@@ -165,7 +165,7 @@ export default function CreateHackathons() {
           placeholder="The date of the Hackathon"
         />
         <Label>Choose Docs *Only PDF under 2 MB is supported</Label>
-        <div className="flex gap-2">
+        <div className="flex gap-2 -z-100">
           <FileInput
             
             type="pdf"

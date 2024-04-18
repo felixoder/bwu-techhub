@@ -97,12 +97,12 @@ export default function CreateHackathons() {
         toast.error(data.message);
       } else {
         setPublishError(null);
-        toast.success("PYQ is uploaded successfully");
+        toast.success("Hackathon is uploaded successfully");
         navigate(`/hack/${data.slug}`);
       }
     } catch (err) {
       setPublishError(err.message);
-      toast.error("Oops! The PYQ was not uploaded");
+      toast.error("Oops! The Hackathon was not uploaded");
     }
   };
 

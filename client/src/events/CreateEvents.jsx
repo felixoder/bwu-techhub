@@ -198,17 +198,13 @@ export default function CreateEvents() {
             className="w-72 h-72 object-cover mx-auto"
           />
         )}
-        <Button
-      
-          gradientDuoTone="purpleToBlue"
-          className="-z-20 mb-3"
-          pill
-          size="sm"
-          outline
+      <button
+          className=" mb-3 bg-blue-800 text-white rounded-md font-semibold h-[50px]"
+          
           type="submit"
         >
           Create
-        </Button>
+        </button>
       </form>
     </div>
   );

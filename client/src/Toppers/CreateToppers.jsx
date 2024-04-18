@@ -178,7 +178,7 @@ export default function CreateToppers() {
         <Label>Choose Image *Only Image under 2 MB is supported</Label>
         <div className="flex gap-2">
           <FileInput
-          className="-z-20"
+          
             type="file"
             accept="image/*"
             onChange={(e) => setFile(e.target.files[0])}

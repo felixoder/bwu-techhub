@@ -97,12 +97,12 @@ export default function CreateToppers() {
         toast.error(data.message);
       } else {
         setPublishError(null);
-        toast.success("NewsLetter is uploaded successfully");
+        toast.success("Topper is uploaded successfully");
         navigate(`/topper/${data.slug}`);
       }
     } catch (err) {
       setPublishError(err.message);
-      toast.error("Oops! The NewsLetter was not uploaded");
+      toast.error("Oops! The Topper was not uploaded");
     }
   };
 

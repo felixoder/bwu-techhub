@@ -42,7 +42,7 @@ export default function DashSidebar() {
   return (
     currentUser && (
 
-<Sidebar className=' fixed '>
+<Sidebar className=' fixed z-100'>
       <Sidebar.Items>
         <Sidebar.ItemGroup className='flex flex-col gap-1'>
           {

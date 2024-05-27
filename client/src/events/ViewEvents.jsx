@@ -64,7 +64,7 @@ export default function ViewEvents() {
                 {post.title} ⭐⭐
               </h5>
               <p className="font-normal text-gray-700 dark:text-gray-400">
-                {post.desc.trim().split(" ").slice(0, 50).join(" ")}...
+                {post.desc ? post.desc.trim().split(" ").slice(0, 50).join(" ") : 'No description available'}...
               </p>
               <p className="font-medium text-gray-700 dark:text-gray-400">
                 Posted by: {post.author}
